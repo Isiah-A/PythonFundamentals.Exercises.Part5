@@ -1,3 +1,4 @@
+import math
 from typing import List
 from math import ceil
 
@@ -32,7 +33,8 @@ def sort_by_commit_count(list_in: List) -> List:
     :param list_in: A list where each entry is a list containing a name and the commit count corresponding to a user
     :return: The same list sorted in ascending order based on the commit count
     """
-    pass  # remove pass statement and implement me
+
+    return sorted(list_in, key=lambda x: x[1])
 
 
 def gen_list_of_nums(n: int) -> List[int]:
@@ -42,7 +44,10 @@ def gen_list_of_nums(n: int) -> List[int]:
     :param n: The number of items the result should contain
     :return: A list of integers
     """
-    pass  # remove pass statement and implement me
+    ran = []
+    for i in range(n):
+        ran.append(i)
+    return ran
 
 
 def half_list(list_in: List, half: int) -> List:
@@ -54,7 +59,17 @@ def half_list(list_in: List, half: int) -> List:
     If the length of list_in is an odd number, round the half value up (hint: math.ceil()).
     :return: A list.
     """
-    pass  # remove pass statement and implement me
+    if len(list_in) % 2 == 0:
+        if half == 1:
+            list_in2 = list_in[: int(len(list_in) / 2)]
+        elif half == 2:
+            list_in2 = list_in[int(-1 * len(list_in) / 2):]
+    elif len(list_in) % 2 == 1:
+        if half == 1:
+            list_in2 = list_in[: math.ceil((len(list_in)/ 2))]
+        elif half == 2:
+            list_in2 = list_in[math.ceil((-1*(len(list_in)+ 1) / 2)):]
+    return list_in2
 
 
 def remove_odds(list_in: List[int]) -> None:
@@ -84,6 +99,8 @@ def concatenate_lists(list_a: List, list_b: List) -> List:
     :return: A list containing all elements from list_a and list_b
     """
     pass  # remove pass statement and implement me
+    list_c = list_a + list_b
+    return list_c
 
 
 def multiply_list(list_in: List, scalar: int) -> List:
@@ -96,3 +113,4 @@ def multiply_list(list_in: List, scalar: int) -> List:
     :return: A list
     """
     pass  # remove pass statement and implement me
+    return list_in * scalar
