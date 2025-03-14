@@ -78,7 +78,9 @@ def remove_odds(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    rm_odd = list(filter(lambda x: x % 2==0, list_in))
+    print(rm_odd)
+
 
 
 def remove_evens(list_in: List[int]) -> None:
@@ -87,7 +89,8 @@ def remove_evens(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    rm_even = list(filter(lambda x: x % 2 == 1, list_in))
+    print(rm_even)
 
 
 def concatenate_lists(list_a: List, list_b: List) -> List:
