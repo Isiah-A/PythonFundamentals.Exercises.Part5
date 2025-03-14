@@ -10,7 +10,8 @@ def get_item_at_position(list_in: List, pos: int) -> List:
     :param pos: Position of desired item in list_in
     :return: Item in pos
     """
-    pass  # remove pass statement and implement me
+
+    return list_in[pos]
 
 
 def print_list_items(list_in: List) -> None:
@@ -20,7 +21,8 @@ def print_list_items(list_in: List) -> None:
     :param list_in: Input list
     :return: None
     """
-    pass  # remove pass statement and implement me
+
+    return print(*list_in, sep='\n')
 
 
 def sort_by_commit_count(list_in: List) -> List:
